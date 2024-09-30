@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestion Auto-Entreprise</title>
+    <style>
+        body { font-family: Arial, sans-serif; line-height: 1.6; margin: 0; padding: 20px; }
+        h1 { color: #333; }
+        nav { background: #f4f4f4; padding: 10px; }
+        nav ul { list-style-type: none; padding: 0; }
+        nav ul li { display: inline; margin-right: 10px; }
+        nav ul li a { text-decoration: none; color: #333; }
+        .container { max-width: 800px; margin: auto; overflow: hidden; padding: 0 20px; }
+        .form-group { margin-bottom: 15px; }
+        label { display: block; margin-bottom: 5px; }
+        input[type="text"], input[type="number"], input[type="date"] { width: 100%; padding: 8px; }
+        button { display: inline-block; background: #333; color: #fff; padding: 10px 20px; border: none; cursor: pointer; }
+        button:hover { background: #555; }
+        table { width: 100%; border-collapse: collapse; }
+        table, th, td { border: 1px solid #ddd; padding: 10px; text-align: left; }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#accueil">Accueil</a></li>
+            <li><a href="#factures">Factures</a></li>
+            <li><a href="#depenses">Dépenses</a></li>
+            <li><a href="#clients">Clients</a></li>
+            <li><a href="#rapports">Rapports</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <h1>Gestion Auto-Entreprise</h1>
+        
+        <section id="accueil">
+            <h2>Tableau de bord</h2>
+            <p>Bienvenue dans votre application de gestion d'auto-entreprise.</p>
+            <!-- Ici, vous pourriez ajouter des widgets ou des graphiques montrant des statistiques clés -->
+        </section>
+
+        <section id="factures">
+            <h2>Gestion des Factures</h2>
+            <form id="factureForm">
+                <div class="form-group">
+                    <label for="clientName">Nom du client:</label>
+                    <input type="text" id="clientName" required>
+                </div>
+                <div class="form-group">
+                    <label for="montant">Montant HT:</label>
+                    <input type="number" id="montant" required>
+                </div>
+                <div class="form-group">
+                    <label for="dateFacture">Date de la facture:</label>
+                    <input type="date" id="dateFacture" required>
+                </div>
+                <button type="submit">Ajouter Facture</button>
+            </form>
+            <table id="facturesTable">
+                <tr>
+                    <th>Client</th>
+                    <th>Montant HT</th>
+                    <th>Date</th>
+                </tr>
+                <!-- Les factures seront ajoutées ici dynamiquement -->
+            </table>
+        </section>
+
+        <section id="depenses">
+            <h2>Suivi des Dépenses</h2>
+            <form id="depenseForm">
+                <div class="form-group">
+                    <label for="fournisseur">Fournisseur:</label>
+                    <input type="text" id="fournisseur" required>
+                </div>
+                <div class="form-group">
+                    <label for="montantDepense">Montant TTC:</label>
+                    <input type="number" id="montantDepense" required>
+                </div>
+                <div class="form-group">
+                    <label for="dateDepense">Date de la dépense:</label>
+                    <input type="date" id="dateDepense" required>
+                </div>
+                <button type="submit">Ajouter Dépense</button>
+            </form>
+            <table id="depensesTable">
+                <tr>
+                    <th>Fournisseur</th>
+                    <th>Montant TTC</th>
+                    <th>Date</th>
+                </tr>
+                <!-- Les dépenses seront ajoutées ici dynamiquement -->
+            </table>
+        </section>
+
+        <section id="clients">
+            <h2>Gestion des Clients</h2>
+            <form id="clientForm">
+                <div class="form-group">
+                    <label for="nomClient">Nom du client:</label>
+                    <input type="text" id="nomClient" required>
+                </div>
+                <div class="form-group">
+                    <label for="emailClient">Email:</label>
+                    <input type="email" id="emailClient" required>
+                </div>
+                <div class="form-group">
+                    <label for="telClient">Téléphone:</label>
+                    <input type="tel" id="telClient">
+                </div>
+                <button type="submit">Ajouter Client</button>
+            </form>
+            <table id="clientsTable">
+                <tr>
+                    <th>Nom</th>
+                    <th>Email</th>
+                    <th>Téléphone</th>
+                </tr>
+                <!-- Les clients seront ajoutés ici dynamiquement -->
+            </table>
+        </section>
+
+        <section id="rapports">
+            <h2>Rapports</h2>
+            <p>Cette section contiendra des rapports générés à partir de vos données.</p>
+            <!-- Ici, vous pourriez ajouter des graphiques ou des tableaux de synthèse -->
+        </section>
+    </div>
+
+    <script>
+        // Ici, vous ajouteriez le code JavaScript pour gérer les interactions utilisateur,
+        // comme l'ajout de factures, de dépenses, de clients, etc.
+        // Par exemple :
+
+        document.getElementById('factureForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            // Code pour ajouter une facture au tableau
+        });
+
+        document.getElementById('depenseForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            // Code pour ajouter une dépense au tableau
+        });
+
+        document.getElementById('clientForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            // Code pour ajouter un client au tableau
+        });
+
+        // Fonctions pour calculer et afficher les rapports
+        function genererRapports() {
+            // Code pour générer et afficher les rapports
+        }
+    </script>
+</body>
+</html>
